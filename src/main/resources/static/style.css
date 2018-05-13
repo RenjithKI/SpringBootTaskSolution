@@ -1,0 +1,29 @@
+body {
+	background-color: #cccccc;
+	font-family: arial,helvetica,sans-serif;
+}
+
+.beerHeadline {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.beerDescription {
+	font-size: 10pt;
+}
+
+label {
+	font-weight: bold;
+}
+
+.error {
+	color: red;
+}
+
+.errorPage {
+  text-align:center;	
+}
+
+.oops {
+	font-size: 76pt;
+}

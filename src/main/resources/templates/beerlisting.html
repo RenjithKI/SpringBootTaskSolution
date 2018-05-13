@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>The Random Beer App</title>
+<link rel="stylesheet" th:href="@{/style.css}"></link>
+<!-- <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> -->
+</head>
+
+<body>
+	<h2>The Random Beer App</h2>
+	
+	
+	<hr />
+	<div th:unless="${#lists.isEmpty(beerlist)}">
+		<dl th:each="beer,itr : ${beerlist}">
+
+			<h3>
+				<span  th:text="${itr.count}"></span>. <span  th:text="${beer.name}"></span>
+			</h3>
+
+			<dt class="beerHeadline">
+				Description : <span th:text="${beer.description}"></span></br> Alcohol
+				Percentage : <span th:text="${beer.percentage}"></span>%</br> Brewery
+				Loaction : <span th:text="${beer.breweryLoaction}">breweryLoaction</span></br>
+
+			</dt>
+			<dd class="beerDescription">				
+			</dd>
+			<hr />
+		</dl>
+	</div>
+	<div th:if="${#lists.isEmpty(beerlist)}">
+		<p>You have no Beer in your Beer List</p>
+	</div>
+	<h2>API Links</h2>
+		
+		<p><a href="/index.html">Visit Random Beer App Home Page</a></p>
+		<p><a href="/random-beer-details">Visit Random-beer-details page</a></p>
+		<p><a href="/beer-list">Visit Beer List Page </a></p>		
+	
+</body>
+</html>

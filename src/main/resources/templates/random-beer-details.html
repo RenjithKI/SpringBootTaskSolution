@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>The Random Beer App</title>
+<link rel="stylesheet" th:href="@{/style.css}"></link>
+<!-- <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> -->
+</head>
+
+<body>
+	<h2>The Random Beer App</h2>
+	<!-- <form method="POST" th:action="@{/random-beer-details}">
+		<input type="submit" value="Show Another Beer" />
+	</form> -->
+	
+	<input type="button" value="Show Another Beer" onClick="window.location.reload()">
+	
+
+	<hr />
+	<div>
+		<h3><span th:text="${beer.name}"></span></h3>
+
+		<dt class="beerHeadline">
+			Description : <span th:text="${beer.description}"></span></br> Alcohol
+			Percentage : <span th:text="${beer.percentage}"></span>%</br> Brewery
+			Loaction : <span th:text="${beer.breweryLoaction}">breweryLoaction</span></br>
+
+		</dt>
+		<dd class="beerDescription"></dd>
+		<hr />
+		<h3>API Links</h3>		
+		<p><a href="/beer-list">Visit Beer List Page </a></p>
+		<p><a href="/index.html">Visit Random Beer App Home Page</a></p>
+		<hr />
+
+	</div>
+
+
+
+
+</body>
+</html>

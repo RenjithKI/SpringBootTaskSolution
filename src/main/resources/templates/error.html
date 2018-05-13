@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Oops!</title>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+  </head>
+
+  <html>
+    <div class="errorPage">
+      <span class="oops">Oops! Error Page</span><br/>
+      <img th:src="@{/MissingPage.png}"></img>
+      <p>There seems to be a problem with the page you requested 
+         (<span text="${path}">/beerAppErrorPage</span>).</p>
+      <p th:text="${'Details: ' + message}"></p>
+    </div>
+    
+    <h2>API Links</h2>
+		
+		<p><a href="/index.html">Visit Random Beer App Home Page</a></p>
+		<p><a href="/random-beer-details">Visit Random-beer-details page</a></p>
+		<p><a href="/beer-list">Visit Beer List Page </a></p>	
+    
+    
+    
+    
+  </html>
+
+</html>
